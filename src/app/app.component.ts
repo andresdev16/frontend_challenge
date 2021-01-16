@@ -8,7 +8,7 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'SWAPI CLIENT';
+  title = 'FRONTEND CHALLENGE';
 
   constructor(
   ) {
