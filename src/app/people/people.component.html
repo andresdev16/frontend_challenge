@@ -8,16 +8,16 @@
         Name: {{people.name}}
       </li>
       <li >
-        Height: {{people.height}}
+        Eye Color: {{people.eye_color}}
       </li>
       <li >
-        Mass: {{people.mass}}
+        Gender: {{people.gender}}
       </li>
-      <li >
-        Hair color: {{people.hair_color}}
+      <li>
+        Films:
       </li>
-      <li >
-        Skin color: {{people.skin_color}}
+      <li *ngFor="let films of people.films">
+        {{films}}
       </li>
     </ul>
 
