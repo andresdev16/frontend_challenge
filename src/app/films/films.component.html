@@ -1,0 +1,28 @@
+<div *ngIf="films_content.loading; else elseBlock">
+  Loading ...
+</div>
+<ng-template #elseBlock>
+  <div class="sw-group" *ngIf="films_content.films_content && films_content.films_content.results ">
+    <ul *ngFor="let film of films_content.films_content.results">
+      <li >
+        Film: {{film.title}}
+      </li>
+      <li >
+        Episode ID: {{film.episode_id}}
+      </li>
+      <li >
+        Director: {{film.director}}
+      </li>
+      <li >
+        Producer: {{film.producer}}
+      </li>
+      <li>Characters:</li>
+      <li *ngFor="let characters of film.characters">
+        <a href="">{{characters}}</a>
+      </li>
+    </ul>
+
+  </div>
+</ng-template>
+
+

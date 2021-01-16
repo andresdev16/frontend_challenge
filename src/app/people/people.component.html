@@ -1,0 +1,27 @@
+<div *ngIf="people_content.loading; else elseBlock">
+  Loading ...
+</div>
+<ng-template #elseBlock>
+  <div class="sw-group" *ngIf="people_content.people_content && people_content.people_content.results ">
+    <ul *ngFor="let people of people_content.people_content.results">
+      <li >
+        Name: {{people.name}}
+      </li>
+      <li >
+        Height: {{people.height}}
+      </li>
+      <li >
+        Mass: {{people.mass}}
+      </li>
+      <li >
+        Hair color: {{people.hair_color}}
+      </li>
+      <li >
+        Skin color: {{people.skin_color}}
+      </li>
+    </ul>
+
+  </div>
+</ng-template>
+
+
